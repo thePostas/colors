@@ -1,16 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-export default class light extends Component {
-    constructor() {
-        super();
-        this.state = {
-
-        };
-    }
-
-    render() {
-        console.log('COLOR PROPS:', this.props);
-        return <div className={'shape'} style={{background: this.props.colors.active ? this.props.colors.color : 'white'}}/>
-
-    }
-}
+export default function light(props) {
+    return (
+        <div
+            className='shape'
+            style={ {background: props.colors.active ? props.colors.color : 'white'} }
+        />
+    )
+};
